@@ -13,10 +13,9 @@ export default function StackList(){
 
         const stackList = useSelector(state => state?.stacks)
         
-
         React.useEffect(()=>{
             if(stackList.length==0)
-            dispatch(setStocks(stacks));
+                dispatch(setStocks(stacks));
         }, []);
 
         return (
