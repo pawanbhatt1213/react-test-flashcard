@@ -10,8 +10,6 @@ import stack from './reducers';
 export default function StackForm() {
 
     const dispatch = useDispatch();
-    const stacks = useSelector(state => state?.stacks);
-    console.log(stacks)
     const [title, setTitle] = React.useState("");
     const [cards, setCards] = React.useState([{"prompt": "", "answer": "" }]);
 
@@ -26,14 +24,6 @@ export default function StackForm() {
         setCards(list);
     };
      
-    // handle click event of the Remove button
-    // const handleRemoveClick = index => {
-    //     const list = [...inputList];
-    //     list.splice(index, 1);
-    //     setInputList(list);
-    // };
-     
-    //   // handle click event of the Add button
     const onPromptAdd = () => {
         setCards([...cards, {prompt: "", answer: "" }]);
     };
