@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import StackForm from "./StackForm";
 
-describe.only("testing StackForm component", () => {
+describe("testing StackForm component", () => {
     const useDispatchSpy = jest.spyOn(redux, 'useDispatch'); 
     const mockDispatchFn = jest.fn();
     useDispatchSpy.mockReturnValue(mockDispatchFn);
